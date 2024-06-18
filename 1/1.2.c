@@ -78,5 +78,10 @@ int main() {
    _greet(42);
    // <--end 4-->
 
+   printf("\n");
+
+   f(3, 5);
+   printf("\n%i", avg3(1, 5, 3));
+
    return 0;
 }

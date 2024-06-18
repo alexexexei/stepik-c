@@ -93,6 +93,11 @@ int main() {
 
     // 3
     all_divisors(100);
+
+    printf("\n");
+
+    printf("%i\n", is_square(4));
+    printf("%i", is_prime(3));
    
     return 0;
 }
