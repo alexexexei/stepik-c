@@ -53,31 +53,25 @@ int second_task() {
 }
 
 int main() {
-    // q1
     q1(a, b);
 
     printf("\n");
 
-    // q2
     q2(a, b);
 
     printf("\n");
 
-    // q3
     q3(a, b, c);
 
     printf("\n");
 
-    // <--1-->
     int input1 = read_int();
     int input2 = read_int();
 
     printf("%d", input1 + input2);
-    // <--end 1-->
 
     printf("\n");
     
-    // 2
     second_task();
 
     return 0;

@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include <math.h>
 
-// 1
 void swap(int* a, int* b) {
     int c;
     c = *a;
@@ -9,7 +8,6 @@ void swap(int* a, int* b) {
     *b = *&c;
 }
 
-// 2
 void normalize(int* a) {
     if (*a < 0) {
         return;
@@ -19,7 +17,6 @@ void normalize(int* a) {
     }
 }
 
-// <--3-->
 void simple(int n, int* a, int* b) {
     *a = 1;
     *b = n;
@@ -58,9 +55,7 @@ void factorize( int n, int* a, int* b )
     *b = max_divider;
     n = ( *a ) * ( *b );
 }
-// <--end 3-->
 
-// <--4-->
 void array_reverse(int* array, int size) {
     int c;
     for (int i = 0; i <= (size - 1) / 2; i++) {
@@ -74,9 +69,7 @@ void array_reverse_ptr(int* array, int* limit) {
     int size = limit - array;
     array_reverse(array, size);
 }
-// <--end 4-->
 
-// 5
 void array_fib(int* array, int* limit) {
     int size = limit - array;
     if (size <= 0) {
@@ -97,8 +90,6 @@ void array_fib(int* array, int* limit) {
     }
 }
 
-// <--6-->
-// example of predicate func
 int predicate(int number) {
     return number % 2 == 0;
 }
@@ -113,9 +104,7 @@ int array_contains(int* array, int* limit, int** position) {
    }
    return 0;
 }
-// <--end 6-->
 
-// <--7-->
 int is_whitespace(char c) { return c == ' ' || c == '\t' || c == '\n'; }
 
 int string_count(char* str) { 
@@ -145,28 +134,8 @@ int string_words(char* str)  {
     
     return word_counter;
 }
-// <--end 7-->
 
 int main() {
-    // <--q1-->
-    // x == 10
-    // &x == 1016
-    // &p == 2056
-    // p == 1016
-    // *p == 10
-    // <--end q1-->
-
-    // <--q2-->
-    // &p == 2056
-    // &pp == 8000
-    // pp == 2056
-    // *pp == 1016
-    // **pp == 10
-    // pp[0] == 1016
-    // pp[0][0] == 10
-    // *pp[0] == 10
-    // <--end q2-->
-
     int x = 10;
     int y = 200;
 

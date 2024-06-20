@@ -13,7 +13,6 @@ void print_newline() {
     printf("\n");
 }
 
-// <--1-->
 int64_t read_int64() {
     int64_t iVal;
     scanf("%" SCNd64, &iVal);
@@ -47,9 +46,7 @@ int64_t* array_int_read( size_t* size ) {
     array_int_fill(array, *size);
     return array;
 }
-// <--end 1-->
 
-// 2
 int64_t* array_int_min( int64_t* array, size_t size ) {
     if (size <= 0) {
         return NULL;
@@ -70,7 +67,6 @@ int64_t* array_int_min( int64_t* array, size_t size ) {
     return min_ptr;
 }
 
-// <--3-->
 void intptr_print( int64_t* x ) {
     if (x == NULL) {
         printf("%s", "None");
@@ -89,9 +85,7 @@ void perform() {
         free(array);
     }
 }
-// <--end 3-->
 
-// <--4-->
 int64_t** marray_read( size_t* rows, size_t** sizes ) {
     scanf("%zu", rows);
     
@@ -119,9 +113,7 @@ void marray_print(int64_t** marray, size_t* sizes, size_t rows) {
         print_newline();
     }
 }
-// <--end 4-->
 
-// 5
 void marray_free( int64_t** marray, size_t rows ) {
     for (size_t i = 0; i < rows; i++) {
         free(*(marray + i));
@@ -129,7 +121,6 @@ void marray_free( int64_t** marray, size_t rows ) {
     free(marray);
 }
 
-// <--6-->
 int64_t* int64_ptr_min(int64_t* x, int64_t* y) {
     if (x == NULL && y == NULL) {
         return NULL;
@@ -200,7 +191,6 @@ void marray_normalize( int64_t** marray, size_t sizes[], size_t rows, int64_t m 
     }
 }
 
-// remove '_'
 void _perform() {
     size_t rows = 0;
     size_t *sizes = 0;
@@ -222,23 +212,8 @@ void _perform() {
     marray_free(double_arr_ptr, rows);
     free(sizes);
 }
-// <--end 6-->
 
 int main() {
-    // <--q1-->
-    // -1
-    // ошибка
-    // 1024
-    // 0 
-    // <--end q1-->
-
-    // <--q2-->
-    // ошибка
-    // 0
-    // -1
-    // 1024 
-    // <--end q2-->
-
     perform();
     _perform();
     return 0;

@@ -1,14 +1,12 @@
 #include<stdio.h>
 #include <math.h>
 
-// 1
 int read_int() {
     int res = 0; 
     scanf("%d", &res);
     return res; 
 }
 
-// 2
 int is_square(int a) {
     if (a < 0) {
         return 0;
@@ -26,7 +24,6 @@ int is_square(int a) {
     return 0;
 }
 
-// <--3-->
 int divides(int a, int b) { 
     return a % b == 0; 
 }
@@ -56,9 +53,7 @@ void all_divisors(int limit) {
         i++;
     }
 }
-// <--end 3-->
 
-// 4
 int is_prime(int a) {
     if (a < 2) {
         return 0;
@@ -76,7 +71,6 @@ int is_prime(int a) {
 }
 
 int main() {
-    // <--1-->
     int insomnia = read_int();
     
     if (insomnia > 10) {
@@ -87,11 +81,9 @@ int main() {
             insomnia++;
         }
     }
-    // <--end 1-->
 
     printf("\n");
 
-    // 3
     all_divisors(100);
 
     printf("\n");

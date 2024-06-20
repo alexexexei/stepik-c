@@ -20,7 +20,6 @@ struct maybe_int64 some_int64( int64_t i ) {
 
 const struct maybe_int64 none_int64 = { 0 };
 
-// <--1-->
 void maybe_int64_print( struct maybe_int64 i ) {
     if (!i.valid) {
         printf("%s", "None");
@@ -45,9 +44,7 @@ struct maybe_int64 maybe_int64_min(struct maybe_int64 a, struct maybe_int64 b) {
         return some_int64( a.value );
     }
 }
-// <--end 1-->
 
-// <--2-->
 size_t read_size() { size_t sz = 0; scanf("%zu", &sz); return sz; }
 
 struct array_int {
@@ -118,9 +115,7 @@ void array_int_free( struct array_int *a ) {
         a->size = 0;
     } 
 }
-// <--end 2-->
 
-// <--3-->
 void array_int_normalize( struct array_int array, int64_t m ) {
   for (size_t i = 0; i < array.size; i = i + 1) {
     array.data[i] = array.data[i] - m;
@@ -224,7 +219,6 @@ void array_array_int_free( struct array_array_int array ) {
     free(array.data);
     array.size = 0;
 }
-// <--end 3-->
 
 void perform() {
   struct array_array_int array = array_array_int_read();
@@ -244,7 +238,6 @@ void print_int64(int64_t i) {
     printf("%" PRId64, i);
 }
 
-// <--4-->
 struct stack {
   size_t count;
   struct array_int data;
@@ -306,15 +299,8 @@ void stack_print( const struct stack* s ) {
     printf(" ");
   }
 }
-// <--end 4-->
 
 int main() {
-    // q1
-    //  Поля структуры расположены в памяти последовательно, возможны пропуски между ними
-
-    // q2
-    // Можно создать массив из таких структур
-
     perform();
     return 0;
 }

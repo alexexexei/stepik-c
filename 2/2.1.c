@@ -2,7 +2,6 @@
 
 #define LIMIT 10
 
-// <--1-->
 uint32_t data[8*1024*1024] = {0};
 
 size_t count_gt(uint32_t* array, size_t size) {
@@ -14,9 +13,7 @@ size_t count_gt(uint32_t* array, size_t size) {
     }
     return counter;
 }
-// <--end 1-->
 
-// 2
 size_t count_zeroes( const void *data, size_t sz ) {
     size_t counter = 0;
     uint8_t *c = (uint8_t*)data;
@@ -29,7 +26,5 @@ size_t count_zeroes( const void *data, size_t sz ) {
 }
 
 int main() {
-    // q1
-    //  Да, такой компилятор соответствует стандарту языка
     return 0;
 }
